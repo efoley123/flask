@@ -208,7 +208,7 @@ class TestGenerator:
             # Run tests with coverage based on language
             if language == "Python":
                 subprocess.run(
-                    ["pytest", str(test_file), "--cov="+str(base_name), "--cov-report=term-missing"],
+                    ["pytest", str(test_file), "--cov=src.flask", "--cov-report=term-missing"],
                     stdout=open(report_file, "a"),
                     check=True
                 )
