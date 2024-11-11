@@ -237,6 +237,8 @@ class TestGenerator:
                 
                 subprocess.check_call([sys.executable, '-m','pip','install', 'pytest-cov'])
                 logging.info(f"Coverage tool for Python is already installed.")
+                subprocess.check_call([sys.executable, '-m','pip','install', 'src.flask'])
+                logging.info(f"Coverage tool for Python is already installed.")
             elif language.lower() == 'javascript':
                 # Check if 'jest' coverage is available for JavaScript
                 subprocess.check_call(['npm', 'list', 'jest'])
