@@ -1,0 +1,50 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.18, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/runner/work/flask/flask
+configfile: pyproject.toml
+plugins: cov-5.0.0
+collected 0 items
+WARNING: Failed to generate report: No data to report.
+
+
+
+---------- coverage: platform linux, python 3.8.18-final-0 -----------
+
+============================ no tests ran in 0.10s =============================
+============================= test session starts ==============================
+platform linux -- Python 3.8.18, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/runner/work/flask/flask
+configfile: pyproject.toml
+plugins: cov-5.0.0
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_____________ ERROR collecting generated_tests/python/test_app.py ______________
+ImportError while importing test module '/home/runner/work/flask/flask/generated_tests/python/test_app.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/importlib/__init__.py:127: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+generated_tests/python/test_app.py:8: in <module>
+    from src.flask.app import Flask, _make_timedelta
+src/flask/__init__.py:5: in <module>
+    from . import json as json
+src/flask/json/__init__.py:6: in <module>
+    from ..globals import current_app
+src/flask/globals.py:6: in <module>
+    from werkzeug.local import LocalProxy
+E   ModuleNotFoundError: No module named 'werkzeug'
+
+---------- coverage: platform linux, python 3.8.18-final-0 -----------
+Name                         Stmts   Miss Branch BrPart  Cover   Missing
+------------------------------------------------------------------------
+src/flask/__init__.py           48     45      2      0     6%   6-60
+src/flask/globals.py            14     10      0      0    29%   17-49
+src/flask/json/__init__.py      25     21      8      0    12%   7-170
+------------------------------------------------------------------------
+TOTAL                           87     76     10      0    11%
+
+=========================== short test summary info ============================
+ERROR generated_tests/python/test_app.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.29s ===============================
